@@ -1,0 +1,21 @@
+spring:
+    datasource:
+        password: ENC(B93dV+0StPgkH+jnZWe35A==)
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://${DATABASE_HOST:127.0.0.1}:${DATABASE_PORT:3306}/${DATABASE_NAME:SaasOauth}?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false
+        username: root
+        initialization-mode: always
+        schema: classpath:/schema.sql
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: true
+        generate-ddl: false
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+security:
+    oauth2:
+        resource:
+            filter-order: 3
