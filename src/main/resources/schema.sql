@@ -80,8 +80,8 @@ CREATE TABLE if
   autoApproveScopes VARCHAR(255)
 );
 
-DROP TABLE IF EXISTS auth_details;
-CREATE TABLE auth_details (
+DROP TABLE IF EXISTS OAUTH_DETAILS;
+CREATE TABLE OAUTH_DETAILS (
   username varchar(256),
   password varchar(256),
   PRIMARY KEY (username)
