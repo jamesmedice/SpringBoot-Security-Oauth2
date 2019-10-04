@@ -43,22 +43,22 @@ INSERT INTO oauth_client_details (client_id,
  
               
               
-INSERT INTO auth_details
+INSERT INTO OAUTH_DETAILS
         VALUES (
                   'james',
                   '$2a$10$QBAjgmeCKjqgjMQwJARuPOlfhc33UngPh6aJbX5Ti5HVsSURc.ix2');
               
-INSERT INTO auth_details
+INSERT INTO OAUTH_DETAILS
         VALUES (
                   'matthew',
                   '$2a$10$QBAjgmeCKjqgjMQwJARuPOlfhc33UngPh6aJbX5Ti5HVsSURc.ix2');
 
-INSERT INTO auth_details
+INSERT INTO OAUTH_DETAILS
         VALUES (
                   'tiago',
                   '$2a$10$WJPNuueC2XXu2F/bEet2p.g7kiTQ1pbkN3yPPGeK4p96ujmdO28UG');
                   
-INSERT INTO auth_details
+INSERT INTO OAUTH_DETAILS
         VALUES (
                   'lucas',
                   '$2a$10$WJPNuueC2XXu2F/bEet2p.g7kiTQ1pbkN3yPPGeK4p96ujmdO28UG');

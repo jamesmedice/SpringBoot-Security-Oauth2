@@ -13,28 +13,28 @@ import javax.persistence.Table;
 @Table(name = "OAUTH_DETAILS")
 public class OauthDetails implements Serializable {
 
-    @Id
-    @Column(name = "username")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String username;
+	@Id
+	@Column(name = "username")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String username;
 
-    @Column(name = "password")
-    private String password;
+	@Column(name = "password")
+	private String password;
 
-    public String getUsername() {
-	return username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public String getPassword() {
-	return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setUsername(String username) {
-	this.username = username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void setPassword(String password) {
-	this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 }
