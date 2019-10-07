@@ -23,6 +23,7 @@
 		<spring.test>5.1.8.RELEASE</spring.test>
 		<swagger2>2.9.2</swagger2>
 		<jasypt>2.0.0</jasypt>
+		<oauth2-autoconfigure>2.1.0.RELEASE</oauth2-autoconfigure>
 	</properties>
 
 	<dependencies>
@@ -40,9 +41,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-oauth2</artifactId>
-			<version>2.1.4.RELEASE</version>
+			<groupId>org.springframework.security.oauth.boot</groupId>
+			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
+			<version>${oauth2-autoconfigure}</version>
 		</dependency>
 
 		<dependency>

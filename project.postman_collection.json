@@ -1,0 +1,96 @@
+{
+	"id": "ecc8c216-e9bd-1822-e11d-ace1515a6b63",
+	"name": "project",
+	"description": "",
+	"order": [
+		"f10087cf-8d0a-916e-8441-ae09ff1232cd",
+		"e6c208af-2d39-701e-27c6-b0da09ec656f"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "e6c208af-2d39-701e-27c6-b0da09ec656f",
+			"name": "http://localhost:8080/api/v1/user",
+			"description": "",
+			"collectionId": "ecc8c216-e9bd-1822-e11d-ace1515a6b63",
+			"method": "GET",
+			"headers": "Authorization: Bearer 77f12d42-e002-4064-9d05-44758edad34e",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "http://localhost:8080/api/v1/user",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 77f12d42-e002-4064-9d05-44758edad34e",
+					"type": "text"
+				}
+			],
+			"collection_id": "ecc8c216-e9bd-1822-e11d-ace1515a6b63"
+		},
+		{
+			"id": "f10087cf-8d0a-916e-8441-ae09ff1232cd",
+			"headers": "Authorization: Basic Y2xpZW50SWQ6c2VjcmV0\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic Y2xpZW50SWQ6c2VjcmV0",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9191/oauth/token",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "tiago",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "secret",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "clientId",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1570432582847,
+			"name": "token",
+			"description": "Get a token",
+			"collectionId": "ecc8c216-e9bd-1822-e11d-ace1515a6b63",
+			"responses": []
+		}
+	]
+}
