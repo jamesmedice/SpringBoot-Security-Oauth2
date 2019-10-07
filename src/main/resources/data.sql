@@ -10,7 +10,7 @@ INSERT INTO oauth_client_details (client_id,
                                   additional_information,
                                   autoapprove)
      VALUES ('clientId',
-             'secret',
+             '$2a$10$f47G/Xv1i70BYerfdeWxguYCJDDgYQBuazFwK5TAadcj5BKlGCNJ2',
              'foo,read,write',
              'password,authorization_code,refresh_token',
              NULL,
@@ -31,7 +31,7 @@ INSERT INTO oauth_client_details (client_id,
                                   additional_information,
                                   autoapprove)
      VALUES ('userId',
-             'secret',
+             '$2a$10$f47G/Xv1i70BYerfdeWxguYCJDDgYQBuazFwK5TAadcj5BKlGCNJ2',
              'read,write,foo,bar',
              'implicit',
              NULL,
@@ -46,20 +46,20 @@ INSERT INTO oauth_client_details (client_id,
 INSERT INTO OAUTH_DETAILS
         VALUES (
                   'james',
-                  '$2a$10$QBAjgmeCKjqgjMQwJARuPOlfhc33UngPh6aJbX5Ti5HVsSURc.ix2');
+                  '$2a$10$f47G/Xv1i70BYerfdeWxguYCJDDgYQBuazFwK5TAadcj5BKlGCNJ2');
               
 INSERT INTO OAUTH_DETAILS
         VALUES (
                   'matthew',
-                  '$2a$10$QBAjgmeCKjqgjMQwJARuPOlfhc33UngPh6aJbX5Ti5HVsSURc.ix2');
+                  '$2a$10$f47G/Xv1i70BYerfdeWxguYCJDDgYQBuazFwK5TAadcj5BKlGCNJ2');
 
 INSERT INTO OAUTH_DETAILS
         VALUES (
                   'tiago',
-                  '$2a$10$WJPNuueC2XXu2F/bEet2p.g7kiTQ1pbkN3yPPGeK4p96ujmdO28UG');
+                  '$2a$10$f47G/Xv1i70BYerfdeWxguYCJDDgYQBuazFwK5TAadcj5BKlGCNJ2');
                   
 INSERT INTO OAUTH_DETAILS
         VALUES (
                   'lucas',
-                  '$2a$10$WJPNuueC2XXu2F/bEet2p.g7kiTQ1pbkN3yPPGeK4p96ujmdO28UG');
+                  '$2a$10$f47G/Xv1i70BYerfdeWxguYCJDDgYQBuazFwK5TAadcj5BKlGCNJ2');
  
