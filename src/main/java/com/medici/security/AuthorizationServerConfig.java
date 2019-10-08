@@ -1,4 +1,4 @@
-package com.medici.config;
+package com.medici.security;
 
 import javax.sql.DataSource;
 
