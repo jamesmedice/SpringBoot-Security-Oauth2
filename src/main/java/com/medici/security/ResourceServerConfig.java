@@ -1,4 +1,4 @@
-package com.medici.config;
+package com.medici.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHand
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-	private static final String RESOURCE_ID = "api";
+	private static final String RESOURCE_ID = "resource-server-rest-api";
 	private static final String SECURED_PATTERN = "/api/**";
 
 	@Override
