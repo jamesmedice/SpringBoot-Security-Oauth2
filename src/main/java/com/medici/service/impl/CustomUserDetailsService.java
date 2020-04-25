@@ -10,6 +10,11 @@ import org.springframework.stereotype.Component;
 import com.medici.model.OauthUser;
 import com.medici.repository.OauthUserRepository;
 
+/**
+ * 
+ * @author a73s
+ *
+ */
 @Component
 @Qualifier("customUserDetailsService")
 public class CustomUserDetailsService implements UserDetailsService {

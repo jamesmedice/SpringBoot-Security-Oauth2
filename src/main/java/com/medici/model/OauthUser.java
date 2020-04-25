@@ -20,35 +20,42 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+ * 
+ * @author a73s
+ *
+ */
 @Entity
-@Table(name = "OAUTH_USERS", uniqueConstraints = { @UniqueConstraint(columnNames = { "USER_NAME" }) })
+@Table(name = "oauth_users", uniqueConstraints = { @UniqueConstraint(columnNames = { "user_name" }) })
 public class OauthUser implements UserDetails, Serializable {
+
+	private static final long serialVersionUID = -8881841922945958455L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "USER_NAME")
+	@Column(name = "user_name")
 	private String username;
 
-	@Column(name = "PASSWORD")
+	@Column(name = "password")
 	private String password;
 
-	@Column(name = "ACCOUNT_EXPIRED")
+	@Column(name = "account_expired")
 	private boolean accountExpired;
 
-	@Column(name = "ACCOUNT_LOCKED")
+	@Column(name = "account_locked")
 	private boolean accountLocked;
 
-	@Column(name = "CREDENTIALS_EXPIRED")
+	@Column(name = "credentials_expired")
 	private boolean credentialsExpired;
 
-	@Column(name = "ENABLED")
+	@Column(name = "enabled")
 	private boolean enabled;
 
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "USERS_AUTHORITIES", joinColumns = @JoinColumn(name = "USER_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID"))
+	@JoinTable(name = "users_authorities", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "id"))
 	@JsonIgnore
 	private Collection<OauthAuthority> authorities;
 

@@ -7,12 +7,21 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler;
 
+/**
+ * 
+ * @author a73s
+ *
+ */
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-	private static final String RESOURCE_ID = "resource-server-rest-api";
-	private static final String SECURED_PATTERN = "/api/**";
+	private static final String HAS_AUTH_ADMIN = "hasAuthority ('ADMIN')";
+	private static final String ENVIRONMENT = "/environment/**";
+	private static final String PUBLISHES = "/publishes";
+	private static final String OAUTH_AUTHORIZE = "/oauth/authorize**";
+	private static final String OAUTH_TOKEN = "/oauth/token";
+	private static final String RESOURCE_ID = "resource_server_rest_api";
 
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) {
@@ -21,10 +30,12 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.anonymous().disable().requestMatchers()
-		.antMatchers(SECURED_PATTERN).and().authorizeRequests()
-		.antMatchers(SECURED_PATTERN).authenticated()
-		.and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
+
+		http.anonymous().disable().requestMatchers().antMatchers(ENVIRONMENT).and().authorizeRequests().antMatchers(ENVIRONMENT).access(HAS_AUTH_ADMIN).and().exceptionHandling()
+				.accessDeniedHandler(new OAuth2AccessDeniedHandler());
+
+		http.authorizeRequests().antMatchers(OAUTH_TOKEN, OAUTH_AUTHORIZE, PUBLISHES).permitAll();
+
 	}
 
 }

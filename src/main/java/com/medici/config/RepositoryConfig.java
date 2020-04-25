@@ -12,8 +12,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @Configuration
 @ComponentScan("com.medici")
-@EnableJpaRepositories("com.medici.repository")
 @EntityScan("com.medici.model")
+@EnableJpaRepositories("com.medici.repository")
 public class RepositoryConfig {
 
 }

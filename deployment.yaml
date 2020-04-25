@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: oauth-app
+  labels:
+    app: oauth-app
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: oauth-app
+  type: NodePort
+--- 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  labels: 
+    app: oauth-app
+  name: oauth-app
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oauth-app
+  template: 
+    metadata: 
+      labels: 
+        app: oauth-app
+    spec: 
+      containers: 
+        - name: oauth-app
+          image: jamesmedice/oauth-app:latest
+          imagePullPolicy: Never
+          ports: 
+            - containerPort: 8080
+---
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: config-ouath-app 
+data:
+  DATABASE_NAME: "SaasOauth"
+---

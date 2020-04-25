@@ -14,13 +14,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.medici.service.impl.CustomUserDetailsService;
 
+/**
+ * 
+ * @author a73s
+ *
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private CustomUserDetailsService userDetailsService;
- 
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {

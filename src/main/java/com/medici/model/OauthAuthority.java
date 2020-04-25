@@ -10,16 +10,23 @@ import javax.persistence.UniqueConstraint;
 
 import org.springframework.security.core.GrantedAuthority;
 
+/**
+ * 
+ * @author a73s
+ *
+ */
 @Entity
-@Table(name = "OAUTH_AUTHORITY", uniqueConstraints = { @UniqueConstraint(columnNames = { "NAME" }) })
+@Table(name = "oauth_authority", uniqueConstraints = { @UniqueConstraint(columnNames = { "name" }) })
 public class OauthAuthority implements GrantedAuthority {
+ 
+	private static final long serialVersionUID = 7679757793863742613L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "NAME")
+	@Column(name = "name")
 	private String name;
 
 	@Override

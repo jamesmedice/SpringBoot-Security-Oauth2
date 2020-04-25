@@ -21,6 +21,11 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 import com.medici.service.impl.CustomUserDetailsService;
 
+/**
+ * 
+ * @author a73s
+ *
+ */
 @Configuration
 @EnableAuthorizationServer
 @EnableGlobalMethodSecurity(prePostEnabled = true)
